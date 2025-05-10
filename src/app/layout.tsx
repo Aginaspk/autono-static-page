@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+const outfitFont = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
 });
 const geistMono = Geist_Mono({
@@ -20,6 +24,10 @@ const montserratReg = localFont({
   src: "../fonts/Montserrat-Light.ttf",
   variable: "--font-montserrat-reg",
 });
+const montserratItalic = localFont({
+  src: "../fonts/Montserrat-Italic.ttf",
+  variable: "--font-montserrat-italic",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -33,11 +41,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${montserratReg.variable} antialiased`}
-        >
-          {children}
-        </body>
+      <body
+        className={`${montserratItalic.variable} ${outfitFont.variable} ${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${montserratReg.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

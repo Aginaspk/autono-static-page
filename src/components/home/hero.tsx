@@ -21,7 +21,9 @@ const Hero = () => {
           <br />
           MOBILITY IS HERE
         </h1>
-        <p className="text-[24px] font-montreg tracking-[0.13em] ">Discover the safest self-driving experience with Autono.</p>
+        <p className={`text-[24px] tracking-[0.13em]`}>
+          Discover the safest self-driving experience with Autono.
+        </p>
       </div>
       <div className="w-full h-full absolute top-0 bg-black/5"></div>
     </div>

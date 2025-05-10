@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 
 const Navbar = () => {
-  const [show, setShow] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [isTop, setIsTop] = useState(true);
+  const [show, setShow] = useState<Boolean>(true);
+  const [lastScrollY, setLastScrollY] = useState<number>(0);
+  const [isTop, setIsTop] = useState<boolean>(true);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = ():void => {
       const currentScrollY = window.scrollY;
       setIsTop(currentScrollY === 0);
       if (currentScrollY > lastScrollY && currentScrollY > 500) {
@@ -29,7 +29,7 @@ const Navbar = () => {
     >
       <div className="flex items-center w-full justify-between">
         <div>
-          <h1 className={`font-mont text-black text-[20px] tracking-[0.35em]`}>
+          <h1 className={`hover:italic  text-black text-[20px] tracking-[0.35em]`}>
             AUTONO
           </h1>
         </div>
