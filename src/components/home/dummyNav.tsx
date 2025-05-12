@@ -10,7 +10,7 @@ const DummyNav = () => {
     <div className="fixed w-full pt-3">
         <div className="flex w-full justify-between px-20 relative z-50">
         <div className={`text-white/70 ${RunLogo.className} absolute top-[23px] tracking-wider`}>
-          GameX!
+          GameTic!
         </div>
         <div className="flex list-none pl-40">
           <li className="text-[16px] py-5 text-white/70 hover:text-white/85 px-4 font-outfit">
